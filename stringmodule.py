@@ -24,7 +24,6 @@ def both_ends(s):
   last = s[-2] + s[-1]
   print(first + last)
 
-
 both_ends("aannbb")
 
 # C. fix_start
@@ -40,7 +39,6 @@ def fix_start(s):
  print(target + newstring)
 
 fix_start("babble")
-
 
 # D. MixUp
 # Given strings a and b, return a single string with a and b separated
@@ -60,13 +58,3 @@ def mix_up(a, b):
     print(first + isolatelast + " " + last + isolatefirst)
 
 mix_up("pod", "mix")
-
-
-# Provided simple test() function used in main() to print
-# what each function returns vs. what it's supposed to return.
-def test(got, expected):
-  if got == expected:
-    prefix = ' OK '
-  else:
-    prefix = '  X '
-  print '%s got: %s expected: %s' % (prefix, repr(got), repr(expected))
