@@ -1,5 +1,6 @@
-#challenges taken from: https://github.com/zhiwehu/Python-programming-exercises
 import sys
+
+#challenges taken from: https://github.com/zhiwehu/Python-programming-exercises
 
 #find all numbers which are divisible by 7 but not a multiple of 5 between 2000 and 3200 
 #should be printed comma seperated on a single line 
@@ -43,6 +44,7 @@ factorial(8)
 # Then, the output should be:
 # {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}
 
+
 def integral(num):
  collection = {}
  valcollection = list(range(1, num + 1))
@@ -62,6 +64,7 @@ integral(8)
 # ['34', '67', '55', '33', '12', '98']
 # ('34', '67', '55', '33', '12', '98')
 
+
 def contain_numers():
   arg = raw_input("enter  collection of numbers")
   fin1 = arg.replace(" ", "")
@@ -78,6 +81,7 @@ contain_numers()
 # printString: to print the string in upper case.
 # Also please include simple test function to test the class methods.
 
+
 class MyClass:
   def __init__(self):
     self._my_string = ""
@@ -92,3 +96,29 @@ class MyClass:
 test = MyClass()
 test.getString()
 test.printString()
+
+
+# Write a program that calculates and prints the value according to the given formula:
+# Q = Square root of [(2 * C * D)/H]
+# Following are the fixed values of C and H:
+# C is 50. H is 30.
+# D is the variable whose values should be input to your program in a comma-separated sequence.
+# Example
+# Let us assume the following comma separated input sequence is given to the program:
+# 100,150,180
+# The output of the program should be:
+# 18,22,24
+
+
+
+
+
+
+
+
+
+
+
+
+
+
