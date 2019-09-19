@@ -55,6 +55,7 @@ not_bad("This dinner is not that bad!")
 
 def divide_string(s):
  if (len(s) % 2) == 0:
+  
 
 def front_back(a, b):
   if ( % 2) == 0:
