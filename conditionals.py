@@ -1,8 +1,9 @@
 #challenges taken from: https://github.com/zhiwehu/Python-programming-exercises
-
+import sys
 
 #find all numbers which are divisible by 7 but not a multiple of 5 between 2000 and 3200 
 #should be printed comma seperated on a single line 
+
 
 def divisible():
  collection = list(range(2000, 3200))
@@ -33,7 +34,6 @@ def factorial(num):
   val = item * val
  print val
 
-
 factorial(8) 
 
 
@@ -55,29 +55,40 @@ def integral(num):
 integral(8)
 
 
-
 # Write a program which accepts a sequence of comma-separated numbers from console and generate a list and a tuple which contains every number.
 # Suppose the following input is supplied to the program:
 # 34,67,55,33,12,98
 # Then, the output should be:
 # ['34', '67', '55', '33', '12', '98']
 # ('34', '67', '55', '33', '12', '98')
-import sys
+
+def contain_numers():
+  arg = raw_input("enter  collection of numbers")
+  fin1 = arg.replace(" ", "")
+  fin2 = fin1.replace(",", "")
+  val2 = tuple(fin2)
+  print arg
+  print val2
+
+contain_numers()
 
 
-def contain_numers(arg):
- val = arg[1:]
- val2 = tuple(val)
- print val
- print val2
+# Define a class which has at least two methods:
+# getString: to get a string from console input
+# printString: to print the string in upper case.
+# Also please include simple test function to test the class methods.
 
-contain_numers(sys.argv)
+class MyClass:
+  def __init__(self):
+    self._my_string = ""
+   
+  def getString(self): 
+   userstring = raw_input("enter input")
+   self._my_string = userstring
+ 
+  def printString(self):
+   print(self._my_string.upper())
 
-
-
-
-
-
-
-
-
+test = MyClass()
+test.getString()
+test.printString()
