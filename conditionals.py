@@ -116,17 +116,12 @@ def calculate_square(sys_array):
  
  for item in sys_array:
   value = math.sqrt(2 * 50 * int(item) / 30)
-  final_value += str(value)
+  final_value += str(round(value))
+  final_value += " "
 
  print(final_value)
 
+ 
 val = input("enter a collection of numbers: ")
-convert = list(val)
-convert.remove(" ")
-convert.remove(",")
-
-print(convert)
-
-calculate_square(list(val))
-
-
+convert = val.split(',')
+calculate_square(list(convert))
