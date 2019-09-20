@@ -1,4 +1,5 @@
 import sys
+import math 
 
 #challenges taken from: https://github.com/zhiwehu/Python-programming-exercises
 
@@ -110,15 +111,22 @@ test.printString()
 # 18,22,24
 
 
+def calculate_square(sys_array):
+ final_value = " "
+ 
+ for item in sys_array:
+  value = math.sqrt(2 * 50 * int(item) / 30)
+  final_value += str(value)
 
+ print(final_value)
 
+val = input("enter a collection of numbers: ")
+convert = list(val)
+convert.remove(" ")
+convert.remove(",")
 
+print(convert)
 
-
-
-
-
-
-
+calculate_square(list(val))
 
 
