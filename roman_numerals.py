@@ -23,11 +23,15 @@ def roman_numeral(num):
     capture_values = []
 
     for item in values:
-     capture_values.append(num / item)
+     if num / item >= 1:
+      capture_values.append(round(num / item))
+     else: 
+      capture_values.append(0)
     
-    counter = 0 
     count = 0
 
+
+       #iterable value     
     for counter, item in enumerate(capture_values):
      if item > 0:
       while count <= item: 
@@ -36,4 +40,4 @@ def roman_numeral(num):
 
     print(roman_string)
 
-roman_numeral(4)
+roman_numeral(5)
