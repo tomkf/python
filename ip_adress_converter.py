@@ -2,17 +2,17 @@ binary = [128, 64, 32, 16, 8, 4, 2, 1]
 
 def binary_calculator(bin_str):
  collection = list(bin_str)
- total = len(bin_str)
+ working_total = len(bin_str)
  counter = 0
  working_val = collection[counter]
  complete_vals = []
 
- while total >= 0:
-  complete_vals.append(working_val * (2 ** total))
+ while working_total >= 0:
+  sum = working_val * (2 ** working_total)
+  complete_vals.append(sum)
   counter += 1
-  total -= 1
+  working_total -= 1
   
-
  print(complete_vals)
  
 
