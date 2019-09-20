@@ -155,3 +155,28 @@ def dimensional_array(x,y):
  print(final_array)
 
 dimensional_array(3, 5)
+
+
+#Write a program that accepts a comma separated sequence of words as input and prints the words in a comma-separated sequence after sorting them alphabetically.
+#Suppose the following input is supplied to the program:
+#without,hello,bag,world
+#Then, the output should be:
+#bag,hello,without,world
+
+
+def sort_wordgroup(my_str):
+ convert = my_str.split(",")
+ convert.sort()
+ final = ",".join(convert)
+ print(final)
+
+sort_wordgroup("without,hello,bag,world")
+
+
+#Write a program that accepts a sequence of whitespace separated words as input and prints the words after removing all duplicate words and sorting them alphanumerically.
+#Suppose the following input is supplied to the program:
+#hello world and practice makes perfect and hello world again
+#Then, the output should be:
+#again and hello makes perfect practice world
+
+
