@@ -1,4 +1,5 @@
 import sys
+import math 
 
 #challenges taken from: https://github.com/zhiwehu/Python-programming-exercises
 
@@ -110,15 +111,63 @@ test.printString()
 # 18,22,24
 
 
+def calculate_square(sys_array):
+ final_value = " "
+ 
+ for item in sys_array:
+  value = math.sqrt(2 * 50 * int(item) / 30)
+  final_value += str(round(value))
+  final_value += " "
+
+ print(final_value)
+
+ 
+val = input("enter a collection of numbers: ")
+convert = val.split(',')
+calculate_square(list(convert))
 
 
+#Write a program which takes 2 digits, X,Y as input and generates a 2-dimensional array. The element value in the i-th row and j-th column of the array should be i*j.
+#Note: i=0,1.., X-1; j=0,1,¡­Y-1.
+#Example
+#Suppose the following inputs are given to the program:
+#3,5
+#Then, the output of the program should be:
+#[[0, 0, 0, 0, 0], [0, 1, 2, 3, 4], [0, 2, 4, 6, 8]] 
 
 
+def dimensional_array(x,y):
+ final_array = []
+ multiple = 0
+ counter = 0
+
+ while counter < x:
+  sub_array = []
+  sub_count = 0 
+  while sub_count < y:
+   sub_array.append(multiple * sub_count)
+   sub_count += 1
+  
+  multiple += 1
+  counter += 1
+  final_array.append(sub_array)
+
+ print(final_array)
+
+dimensional_array(3, 5)
 
 
+#Write a program that accepts a comma separated sequence of words as input and prints the words in a comma-separated sequence after sorting them alphabetically.
+#Suppose the following input is supplied to the program:
+#without,hello,bag,world
+#Then, the output should be:
+#bag,hello,without,world
 
 
+def sort_wordgroup(my_str):
+ convert = my_str.split(",")
+ convert.sort()
+ final = ",".join(convert)
+ print(final)
 
-
-
-
+sort_wordgroup("without,hello,bag,world")

@@ -21,9 +21,11 @@ def roman_numeral(num):
     capture_values = []
 
     for item in values:
-     capture_values.append(num / item)
+     if num / item >= 1:
+      capture_values.append(round(num / item))
+     else: 
+      capture_values.append(0)
     
-    counter = 0 
     count = 0
     working_value = 0 
     first_val = filter(lambda x: x > 0, capture_values)
@@ -31,8 +33,9 @@ def roman_numeral(num):
     index_location = capture_values.index(first_occurrence)
     working_value = values[index_location] * first_occurrence
 
+
+       #iterable value     
     for counter, item in enumerate(capture_values):
-     print(item)
      
      if item > 0:
       while working_value > 0:
@@ -41,4 +44,4 @@ def roman_numeral(num):
 
     print(roman_string)
 
-roman_numeral(10)
+roman_numeral(5)
