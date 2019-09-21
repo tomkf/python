@@ -32,17 +32,17 @@ def roman_numeral(num):
     first_occurrence= list(first_val)[0]
 
     index_location = capture_values.index(first_occurrence)
-    ## ^ this is the problem ^ ##
-
-
     working_value = values[index_location] * first_occurrence
+    complete_val = num
 
     for counter, item in enumerate(capture_values):
      if item > 0:
-      while working_value > 0:
+      while complete_val > 0:
        roman_string += numerals[counter]
-       working_value -= values[index_location]
-
+    ## ^^ this is a problem ^^ ##
+    
+       complete_val -= values[counter]
+    
     print(roman_string)
 
-roman_numeral(6)
+roman_numeral(11)
