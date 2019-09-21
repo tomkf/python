@@ -30,13 +30,14 @@ def roman_numeral(num):
     working_value = 0 
     first_val = filter(lambda x: x > 0, capture_values)
     first_occurrence= list(first_val)[0]
+
     index_location = capture_values.index(first_occurrence)
+    ## ^ this is the problem ^ ##
+
+
     working_value = values[index_location] * first_occurrence
 
-
-       #iterable value     
     for counter, item in enumerate(capture_values):
-     
      if item > 0:
       while working_value > 0:
        roman_string += numerals[counter]
@@ -44,4 +45,4 @@ def roman_numeral(num):
 
     print(roman_string)
 
-roman_numeral(5)
+roman_numeral(6)
