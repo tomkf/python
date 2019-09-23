@@ -11,12 +11,16 @@ import random
 # words beginning with a vowel are not changed but you should still add an l to the start of the word and a suffix at the end (
     #"atout" should give "latoutoc" or "latoutic")
 
-#should be able to translate any complicated sentence, regardless of punctuation
+
+
+#######################should be able to translate any complicated sentence, regardless of punctuation
 
 
 suffix = ["em", "e", "ji", "oc", "ic", "uche", "es"]
 vowels = ["a", "e", "i", "o", "u", "y"]
 consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'y', 'z']
+punctuation = ["!", " ", ".", "-", ":", ","]
+
 
 def louchbem_translator(str):
  if len(str) < 2:
@@ -48,4 +52,4 @@ def louchbem_translator(str):
 
  print(final.join(str_list))
 
-louchbem_translator("atout")
+louchbem_translator("chcat, atot!")
