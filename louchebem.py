@@ -13,7 +13,8 @@
 
 
 suffix = ["em", "e", "ji", "oc", "ic", "uche", "es"]
-vowels = ["a", "e", "i", "o", "u", "y"]
+# vowels = ["a", "e", "i", "o", "u", "y"]
+consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'y', 'z']
 
 def louchbem_translator(str):
  if len(str) < 2:
@@ -21,18 +22,14 @@ def louchbem_translator(str):
 
  str_list = [x for x in str]
 
+
  const_group = []
- statement = True
 
- for char in str_list: 
-  for v in vowels:
-    if char == v is False:
-     const_group.append(char)
-     print(const_group)
-     str_list.remove(char)
-    else: 
-     return v
-
+ for char in str_list:
+  if char in consonants:
+   const_group.append(char)
+  else: 
+   break
 
  print(const_group)
 
