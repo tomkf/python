@@ -42,3 +42,56 @@ def binary_check(user_input):
      print(item)
 
 binary_check(input("enter a collection of 4 digit binary numbers"))
+
+
+# Question:
+# Write a program that accepts a sentence and calculate the number of letters and digits.
+# Suppose the following input is supplied to the program:
+# hello world! 123
+# Then, the output should be:
+# LETTERS 10
+# DIGITS 3
+
+
+def char_counter(str):
+
+  user_letters = 0
+  user_array = str.split()
+
+  for item in user_array:
+    user_letters += len(item)
+  
+  print("WORDS: %s" % len(user_array))  
+  print("LETTERS: %s" % user_letters)
+
+char_counter(input("enter a your words (include quotation marks): "))
+
+
+# Question:
+# Write a program that accepts a sentence and calculate the number of upper case letters and lower case letters.
+
+
+def case_counter(str):
+  convert = list(str)
+  low_case = 0
+  up_case = 0
+  
+  for char in convert:
+    if char.islower() == True:
+      low_case += 1
+    elif char.isupper() == True:
+      up_case += 1
+
+  print("Upper case: %s" % up_case)
+  print("Lower case: %s" % low_case)
+
+case_counter("Hello world!")
+
+
+# Question:
+# Write a program that computes the net amount of a bank account based a transaction log from console input.
+#  The transaction log format is shown as following:
+# D (x)
+# W (x)
+
+
