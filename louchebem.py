@@ -15,7 +15,7 @@ import random
 
 
 suffix = ["em", "e", "ji", "oc", "ic", "uche", "es"]
-# vowels = ["a", "e", "i", "o", "u", "y"]
+vowels = ["a", "e", "i", "o", "u", "y"]
 consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'y', 'z']
 
 def louchbem_translator(str):
@@ -23,6 +23,12 @@ def louchbem_translator(str):
   print("Word too small to translate")
 
  str_list = [x for x in str]
+
+ ran = random.randint(0, 6)
+ 
+ if str_list[0] in vowels:
+  str_list.insert(0, "l")
+  str_list.append(suffix[ran])
 
  const_group = []
 
@@ -38,9 +44,8 @@ def louchbem_translator(str):
   str_list.remove(con)
   str_list.append(con)
   str_list.insert(0, "l")
-  ran = random.randint(0, 6)
   str_list.append(suffix[ran])
 
  print(final.join(str_list))
 
-louchbem_translator("patron")
+louchbem_translator("atout")
