@@ -28,7 +28,7 @@ remove_whitespace("hello world and hello world again")
 
 # Question:
 # Write a program which accepts a sequence of comma separated 4 digit binary numbers as its input
-# then check whether they are divisible by 5 or not. The numbers that are divisible by 5 are to be printed in a comma separated sequence.
+# then check whether they are divisible by 5 or not.
 # Example:
 # 0100,0011,1010,1001
 # Then the output should be:
@@ -93,5 +93,38 @@ case_counter("Hello world!")
 #  The transaction log format is shown as following:
 # D (x)
 # W (x)
+
+
+sum_total = 0 
+
+def bank_interface(sum, command):
+  working_arr = command.split()
+  if working_arr[0] == "D":
+    sum += int(working_arr[1])
+  elif working_arr[0] == "W":
+    sum -= int(working_arr[1])
+  
+  print(sum)
+  sum_total = sum
+
+bank_interface(sum_total, input("enter command in format D or W + the amount you wish to deposit: "))
+
+
+# Question:
+# A website requires the users to input username and password to register. Write a program to check the validity of password input 
+# Following are the criteria for checking the password:
+# 1. At least 1 letter between [a-z]
+# 2. At least 1 number between [0-9]
+# 1. At least 1 letter between [A-Z]
+# 3. At least 1 character from [$#@]
+# 4. Minimum length of transaction password: 6
+# 5. Maximum length of transaction password: 12
+# Your program should accept a sequence of comma separated passwords and will check them according to the above criteria. 
+# Passwords that match the criteria are to be printed, each separated by a comma.
+# Example
+# If the following passwords are given as input to the program:
+# ABd1234@1,a F1#,2w3E*,2We3345
+# Then, the output of the program should be:
+# ABd1234@1
 
 
