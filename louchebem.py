@@ -1,3 +1,5 @@
+import random
+
 # first consonant group (letters before the first vowel), and replace it with an "L".
 #  Then, you put that first consonant group at the end of the word, followed by one of the louchebem suffixes
 #   So "PATRON" becomes "LATRONPEM"
@@ -22,8 +24,9 @@ def louchbem_translator(str):
 
  str_list = [x for x in str]
 
-
  const_group = []
+
+ final = ""
 
  for char in str_list:
   if char in consonants:
@@ -31,6 +34,13 @@ def louchbem_translator(str):
   else: 
    break
 
- print(const_group)
+ for con in const_group:
+  str_list.remove(con)
+  str_list.append(con)
+  str_list.insert(0, "l")
+  ran = random.randint(0, 6)
+  str_list.append(suffix[ran])
+
+ print(final.join(str_list))
 
 louchbem_translator("patron")
