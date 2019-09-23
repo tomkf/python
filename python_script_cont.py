@@ -1,3 +1,5 @@
+import sys
+
 # Challenges taken from: 
 # https://github.com/zhiwehu/Python-programming-exercises/blob/master/100%2B%20Python%20challenging%20programming%20exercises.txt
 
@@ -21,5 +23,22 @@ def remove_whitespace(str):
  str_array.sort()
  print(' '.join(str_array))
 
-
 remove_whitespace("hello world and hello world again")
+
+
+# Question:
+# Write a program which accepts a sequence of comma separated 4 digit binary numbers as its input
+# then check whether they are divisible by 5 or not. The numbers that are divisible by 5 are to be printed in a comma separated sequence.
+# Example:
+# 0100,0011,1010,1001
+# Then the output should be:
+# 1010
+
+
+def binary_check(user_input):
+ 
+ for item in user_input:
+   if item % 5 == 0:
+     print(item)
+
+binary_check(input("enter a collection of 4 digit binary numbers"))
