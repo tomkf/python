@@ -19,6 +19,7 @@ def roman_numeral(num):
     
     if num <= 0:
      print("enter valid number")
+     return num
 
     capture_values = []
 
@@ -28,25 +29,29 @@ def roman_numeral(num):
      else: 
       capture_values.append(0)
     
-    working_value = 0 
-    first_val = filter(lambda x: x > 0, capture_values)
-    first_occurrence= list(first_val)[0]
+    # first_val = filter(lambda x: x > 0, capture_values)
+    # first_occurrence = list(first_val)[0]
 
-    index_location = capture_values.index(first_occurrence)
-    working_value = values[index_location] * first_occurrence
+  #   index_location = capture_values.index(first_occurrence)
+  #   working_value = values[index_location] * first_occurrence
     complete_val = num
-   # print(complete_val)
-    #print(working_value)
+  #  # print(complete_val)
+  #   print(working_value)
 
     for counter, item in enumerate(capture_values):
      # while complete_val > 0:
-      print(item)
-      if complete_val >= values[counter]:
-        roman_string += numerals[counter]
-        complete_val -= values[counter]
-        print(complete_val)
+      print("check:", values[counter], capture_values[counter])
+      if complete_val >=  values[counter]:
+        complete_val -= (values[counter] * capture_values[counter])
+        for x in range(capture_values[counter]):
+         roman_string += numerals[counter]      # capture_values[counter] -= complete_val
+
+
+        
+      
+        
     
     print(capture_values)
     print(roman_string)
 
-roman_numeral(8)
+roman_numeral(11)
